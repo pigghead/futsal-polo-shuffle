@@ -17,13 +17,13 @@ class Game: ObservableObject {
     @Published var currentPlayer:Int?
     
     // These are the four quadrants/ discard+swap piles
-    @Published var quad1:[Int]?
-    @Published var quad2:[Int]?
-    @Published var quad3:[Int]?
-    @Published var quad4:[Int]?
+    @Published var pile1:[Int]?
+    @Published var pile2:[Int]?
+    @Published var pile3:[Int]?
+    @Published var pile4:[Int]?
     
     // The center card
-    @Published var center:Int?
+    @Published var targetCard:Int?
     
     // find the player that will go first
     private func chooseStartPlayer() -> Int {
@@ -34,11 +34,11 @@ class Game: ObservableObject {
     public func StartGame(Deck: Deck) {
         currentPlayer = chooseStartPlayer()
         
-        quad1?.append(Deck.popCard())
-        quad2?.append(Deck.popCard())
-        quad3?.append(Deck.popCard())
-        quad4?.append(Deck.popCard())
+        pile1?.append(Deck.drawCard())
+        pile2?.append(Deck.drawCard())
+        pile3?.append(Deck.drawCard())
+        pile4?.append(Deck.drawCard())
         
-        center = Deck.popCard()
+        targetCard = Deck.drawCard()
     }
 }

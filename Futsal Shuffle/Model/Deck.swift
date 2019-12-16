@@ -31,7 +31,7 @@ class Deck: ObservableObject {
     }
     
     // Pop the next card to be used
-    public func popCard() -> Int {
+    public func drawCard() -> Int {
         let nextCard = deck.removeLast()
         return nextCard
     }
