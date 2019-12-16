@@ -21,8 +21,6 @@ class Deck: ObservableObject {
         9, 9, 9, 9, 9
     ]
     
-    @Published var name:String = "My Name"
-    
     init() {
         // Every time a deck is created, shuffle it
         deck = deck.shuffled()
@@ -30,5 +28,11 @@ class Deck: ObservableObject {
     
     public func shuffleDeck() {
         deck = deck.shuffled()
+    }
+    
+    // Pop the next card to be used
+    public func popCard() -> Int {
+        let nextCard = deck.removeLast()
+        return nextCard
     }
 }

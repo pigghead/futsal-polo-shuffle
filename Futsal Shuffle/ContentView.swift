@@ -11,11 +11,17 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var newDeck:Deck = Deck()
+    @State private var drawnCard:Int?
     
     var body: some View {
         List {
-            ForEach (self.newDeck.deck, id:\.self) { card in
-                Text(card.description)
+//            ForEach (self.newDeck.deck, id:\.self) { card in
+//                Text(card.description)
+//            }
+            Button(action: {
+                self.drawnCard = self.newDeck.popCard()
+            }) {
+                Text(drawnCard?.description ?? "Draw!")
             }
         }
     }

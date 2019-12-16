@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A94E8CEA23A7218A00DC9ED3 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C420223A71C5C00537519 /* Deck.swift */; };
 		A94E8CEC23A7254C00DC9ED3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E8CEB23A7254C00DC9ED3 /* Game.swift */; };
+		A94E8CEE23A7283200DC9ED3 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E8CED23A7283200DC9ED3 /* Player.swift */; };
 		A96C41EC23A71ADE00537519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C41EB23A71ADE00537519 /* AppDelegate.swift */; };
 		A96C41EE23A71ADE00537519 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C41ED23A71ADE00537519 /* SceneDelegate.swift */; };
 		A96C41F123A71ADE00537519 /* Futsal_Shuffle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A96C41EF23A71ADE00537519 /* Futsal_Shuffle.xcdatamodeld */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		A94E8CEB23A7254C00DC9ED3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		A94E8CED23A7283200DC9ED3 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		A96C41E823A71ADE00537519 /* Futsal Shuffle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Futsal Shuffle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96C41EB23A71ADE00537519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A96C41ED23A71ADE00537519 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 			children = (
 				A96C420223A71C5C00537519 /* Deck.swift */,
 				A94E8CEB23A7254C00DC9ED3 /* Game.swift */,
+				A94E8CED23A7283200DC9ED3 /* Player.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				A94E8CEC23A7254C00DC9ED3 /* Game.swift in Sources */,
 				A96C41F123A71ADE00537519 /* Futsal_Shuffle.xcdatamodeld in Sources */,
 				A94E8CEA23A7218A00DC9ED3 /* Deck.swift in Sources */,
+				A94E8CEE23A7283200DC9ED3 /* Player.swift in Sources */,
 				A96C41F323A71ADE00537519 /* ContentView.swift in Sources */,
 				A96C41EE23A71ADE00537519 /* SceneDelegate.swift in Sources */,
 			);
