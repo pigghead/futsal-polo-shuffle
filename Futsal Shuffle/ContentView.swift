@@ -9,8 +9,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var newDeck:Deck = Deck()
+    
     var body: some View {
-        Text("Hello, World!")
+        List {
+            ForEach (self.newDeck.deck, id:\.self) { card in
+                Text(card.description)
+            }
+        }
     }
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A94E8CEA23A7218A00DC9ED3 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C420223A71C5C00537519 /* Deck.swift */; };
+		A94E8CEC23A7254C00DC9ED3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E8CEB23A7254C00DC9ED3 /* Game.swift */; };
 		A96C41EC23A71ADE00537519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C41EB23A71ADE00537519 /* AppDelegate.swift */; };
 		A96C41EE23A71ADE00537519 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C41ED23A71ADE00537519 /* SceneDelegate.swift */; };
 		A96C41F123A71ADE00537519 /* Futsal_Shuffle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A96C41EF23A71ADE00537519 /* Futsal_Shuffle.xcdatamodeld */; };
@@ -17,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A94E8CEB23A7254C00DC9ED3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		A96C41E823A71ADE00537519 /* Futsal Shuffle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Futsal Shuffle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96C41EB23A71ADE00537519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A96C41ED23A71ADE00537519 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		A96C41F723A71AE100537519 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A96C41FA23A71AE100537519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A96C41FC23A71AE100537519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A96C420223A71C5C00537519 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A94E8CE923A7212300DC9ED3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A96C420223A71C5C00537519 /* Deck.swift */,
+				A94E8CEB23A7254C00DC9ED3 /* Game.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A96C41DF23A71ADE00537519 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +74,7 @@
 				A96C41EB23A71ADE00537519 /* AppDelegate.swift */,
 				A96C41ED23A71ADE00537519 /* SceneDelegate.swift */,
 				A96C41F223A71ADE00537519 /* ContentView.swift */,
+				A94E8CE923A7212300DC9ED3 /* Model */,
 				A96C41F423A71AE100537519 /* Assets.xcassets */,
 				A96C41F923A71AE100537519 /* LaunchScreen.storyboard */,
 				A96C41FC23A71AE100537519 /* Info.plist */,
@@ -150,7 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A96C41EC23A71ADE00537519 /* AppDelegate.swift in Sources */,
+				A94E8CEC23A7254C00DC9ED3 /* Game.swift in Sources */,
 				A96C41F123A71ADE00537519 /* Futsal_Shuffle.xcdatamodeld in Sources */,
+				A94E8CEA23A7218A00DC9ED3 /* Deck.swift in Sources */,
 				A96C41F323A71ADE00537519 /* ContentView.swift in Sources */,
 				A96C41EE23A71ADE00537519 /* SceneDelegate.swift in Sources */,
 			);
