@@ -11,17 +11,49 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var newDeck:Deck = Deck()
-    @State private var drawnCard:Int?
+    @ObservedObject var newGame:Game = Game()
+    @State private var drawnCard:Int = 0
     
     var body: some View {
-        List {
-//            ForEach (self.newDeck.deck, id:\.self) { card in
-//                Text(card.description)
-//            }
-            Button(action: {
-                self.drawnCard = self.newDeck.popCard()
-            }) {
-                Text(drawnCard?.description ?? "Draw!")
+        ZStack {
+            Image("background").resizable().edgesIgnoringSafeArea(.all)
+            VStack {
+                Spacer()
+                VStack {
+                    Text("Player " + String(self.newGame.currentPlayer!) + "'s turn")
+                    Spacer()
+                    Image("back1")
+                        .resizable().frame(width: 70, height: 100)
+                    Spacer()
+                    HStack {
+                        Image("back1")
+                            .resizable().frame(width: 70, height: 100)
+                            .padding(.leading)
+                        Spacer()
+                        Text("Center")
+                        Spacer()
+                        Image("back1")
+                            .resizable().frame(width: 70, height: 100)
+                            .padding(.trailing)
+                    }
+                    Spacer()
+                    Image("back1")
+                        .resizable().frame(width: 70, height: 100)
+                    Spacer()
+                    Image("card" + String(drawnCard))
+                        .resizable().frame(width: 70, height: 100)
+                    Spacer()
+                }
+                
+                Spacer()
+                
+                Button(action: {
+                    self.drawnCard = self.newDeck.drawCard()
+                    // Advance the player's turn
+                    self.newGame.ChangeTurn()
+                }) {
+                    Text("Draw")
+                }
             }
         }
     }

@@ -8,6 +8,10 @@
 
 import Foundation
 
-class Player:NSObject {
+class Player:ObservableObject {
+    // Default score is 0
+    @Published var playerScore:Int = 0
     
+    // 0 for playerhand should give us an unusable number
+    @Published var playerHand:Int = 0
 }

@@ -25,6 +25,10 @@ class Game: ObservableObject {
     // The center card
     @Published var targetCard:Int?
     
+    init() {
+        currentPlayer = chooseStartPlayer()
+    }
+    
     // find the player that will go first
     private func chooseStartPlayer() -> Int {
         return Int.random(in: 1...2)
@@ -40,5 +44,37 @@ class Game: ObservableObject {
         pile4?.append(Deck.drawCard())
         
         targetCard = Deck.drawCard()
+    }
+    
+    // Switch from one player's turn to the next
+    public func EndTurn(currentDeck: Deck, player1: Player, player2: Player) {
+        if currentDeck.deck.count == 0 {
+            //EndGame(player1: player1, player2: player2)
+        } else {
+            ChangeTurn()
+        }
+    }
+    
+    // Change from the current player's turn to the next player's turn
+    public func ChangeTurn() {
+        if currentPlayer == 1 {
+            currentPlayer = 2
+        } else if currentPlayer == 2 {
+            currentPlayer = 1
+        }
+    }
+    
+    // Check which player had the highest score
+    // Returns the winning player
+    public func EndGame(player1: Player, player2: Player) -> Int {
+        var winningPlayer:Player?
+
+        if player1.playerScore > player2.playerScore {
+            return 1
+        } else if player2.playerScore > player1.playerScore {
+            return 2
+        }
+
+        return 3
     }
 }
