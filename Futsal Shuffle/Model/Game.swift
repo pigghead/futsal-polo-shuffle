@@ -67,8 +67,6 @@ class Game: ObservableObject {
     // Check which player had the highest score
     // Returns the winning player
     public func EndGame(player1: Player, player2: Player) -> Int {
-        var winningPlayer:Player?
-
         if player1.playerScore > player2.playerScore {
             return 1
         } else if player2.playerScore > player1.playerScore {

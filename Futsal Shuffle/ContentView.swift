@@ -10,49 +10,77 @@ import SwiftUI
 
 struct ContentView: View {
     
+    // Observed object for data interacting with one another
+    // MARK: - OBSERVABLES -
     @ObservedObject var newDeck:Deck = Deck()
     @ObservedObject var newGame:Game = Game()
     @State private var drawnCard:Int = 0
     
     var body: some View {
         ZStack {
-            Image("background").resizable().edgesIgnoringSafeArea(.all)
+            Image("background")
+                .resizable().edgesIgnoringSafeArea(.all)
             VStack {
-                Spacer()
-                VStack {
-                    Text("Player " + String(self.newGame.currentPlayer!) + "'s turn")
+                VStack {  // Main container
+                    //Text("Player " + String(self.newGame.currentPlayer!) + "'s turn")
                     Spacer()
-                    Image("back1")
-                        .resizable().frame(width: 70, height: 100)
+                    HStack {  // Opposing player's bin
+                        Image("back1")
+                            .resizable().frame(width: 55, height: 85)
+                            .padding()
+                        VStack {
+                            Text("Player 2")  // replace with name attached to player eventually
+                            Text("Score")
+                        }
+                    }
                     Spacer()
                     HStack {
                         Image("back1")
-                            .resizable().frame(width: 70, height: 100)
+                            .resizable().frame(width: 55, height: 85)
                             .padding(.leading)
                         Spacer()
                         Text("Center")
                         Spacer()
                         Image("back1")
-                            .resizable().frame(width: 70, height: 100)
+                            .resizable().frame(width: 55, height: 85)
                             .padding(.trailing)
                     }
                     Spacer()
                     Image("back1")
-                        .resizable().frame(width: 70, height: 100)
+                        .resizable().frame(width: 55, height: 85)
                     Spacer()
-                    Image("card" + String(drawnCard))
-                        .resizable().frame(width: 70, height: 100)
-                    Spacer()
+                    HStack {
+                        VStack {
+                            Text("Player 1")
+                            Text("Score")
+                        }
+                        if drawnCard == 0 {
+                            Image("back1")
+                                .resizable().frame(width: 55, height: 85)
+                                .padding()
+                                .opacity(0.2)
+                        } else {
+                            Image("card" + String(drawnCard))
+                                .resizable().frame(width: 55, height: 85)
+                                .padding()
+                        }
+                    }
                 }
                 
                 Spacer()
                 
-                Button(action: {
-                    self.drawnCard = self.newDeck.drawCard()
-                    // Advance the player's turn
-                    self.newGame.ChangeTurn()
-                }) {
-                    Text("Draw")
+                HStack {  // "Action" pane (draw, discard)
+                    Button(action: {
+                        self.drawnCard = self.newDeck.drawCard()
+                        // Advance the player's turn
+                        self.newGame.ChangeTurn()
+                    }) {
+                        Text("Draw")
+                    }.padding(.leading, 50)
+                    Spacer()
+                    Image("trash")
+                        .resizable().frame(width: 45, height: 45)
+                        .clipShape(Circle()).padding(.trailing, 50)
                 }
             }
         }
