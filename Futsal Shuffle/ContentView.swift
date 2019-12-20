@@ -24,15 +24,19 @@ struct ContentView: View {
                 VStack {  // Main container
                     //Text("Player " + String(self.newGame.currentPlayer!) + "'s turn")
                     Spacer()
-                    HStack {  // Opposing player's bin
+                    HStack {
                         Image("back1")
                             .resizable().frame(width: 55, height: 85)
                             .padding()
                         VStack {
-                            Text("Player 2")  // replace with name attached to player eventually
+                            Text("Player 2")
                             Text("Score")
                         }
                     }
+                    Spacer()
+                    Image("back1")
+                        .resizable().frame(width: 55, height: 85)
+                        .padding()
                     Spacer()
                     HStack {
                         Image("back1")
