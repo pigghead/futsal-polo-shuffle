@@ -45,14 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A94E8CE923A7212300DC9ED3 /* Model */ = {
+		A94E8CE923A7212300DC9ED3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				A96C420223A71C5C00537519 /* Deck.swift */,
 				A94E8CEB23A7254C00DC9ED3 /* Game.swift */,
 				A94E8CED23A7283200DC9ED3 /* Player.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A96C41DF23A71ADE00537519 = {
@@ -74,10 +74,10 @@
 		A96C41EA23A71ADE00537519 /* Futsal Shuffle */ = {
 			isa = PBXGroup;
 			children = (
-				A96C41EB23A71ADE00537519 /* AppDelegate.swift */,
-				A96C41ED23A71ADE00537519 /* SceneDelegate.swift */,
+				A99B0B0023B3007B0039A505 /* Delegates */,
+				A99B0AFF23B300520039A505 /* Views */,
 				A96C41F223A71ADE00537519 /* ContentView.swift */,
-				A94E8CE923A7212300DC9ED3 /* Model */,
+				A94E8CE923A7212300DC9ED3 /* Models */,
 				A96C41F423A71AE100537519 /* Assets.xcassets */,
 				A96C41F923A71AE100537519 /* LaunchScreen.storyboard */,
 				A96C41FC23A71AE100537519 /* Info.plist */,
@@ -93,6 +93,22 @@
 				A96C41F723A71AE100537519 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A99B0AFF23B300520039A505 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A99B0B0023B3007B0039A505 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				A96C41EB23A71ADE00537519 /* AppDelegate.swift */,
+				A96C41ED23A71ADE00537519 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
