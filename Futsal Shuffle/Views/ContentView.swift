@@ -25,8 +25,9 @@ struct ContentView: View {
                     //Text("Player " + String(self.newGame.currentPlayer!) + "'s turn")
                     Spacer()
                     HStack {
+                        Image(systemName: "person.fill")
+                            .font(.largeTitle)
                         Image("back1")
-                            .resizable().frame(width: 55, height: 85)
                             .padding()
                         VStack {
                             Text("Player 2")
@@ -68,6 +69,8 @@ struct ContentView: View {
                                 .resizable().frame(width: 55, height: 85)
                                 .padding()
                         }
+                        Image(systemName: "person").clipShape()
+                            //.font(.largeTitle)
                     }
                 }
                 

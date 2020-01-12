@@ -17,6 +17,7 @@
 		A96C41F523A71AE100537519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A96C41F423A71AE100537519 /* Assets.xcassets */; };
 		A96C41F823A71AE100537519 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A96C41F723A71AE100537519 /* Preview Assets.xcassets */; };
 		A96C41FB23A71AE100537519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96C41F923A71AE100537519 /* LaunchScreen.storyboard */; };
+		A99B0B0223B306C50039A505 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99B0B0123B306C50039A505 /* MainMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A96C41FA23A71AE100537519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A96C41FC23A71AE100537519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A96C420223A71C5C00537519 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		A99B0B0123B306C50039A505 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,6 @@
 			children = (
 				A99B0B0023B3007B0039A505 /* Delegates */,
 				A99B0AFF23B300520039A505 /* Views */,
-				A96C41F223A71ADE00537519 /* ContentView.swift */,
 				A94E8CE923A7212300DC9ED3 /* Models */,
 				A96C41F423A71AE100537519 /* Assets.xcassets */,
 				A96C41F923A71AE100537519 /* LaunchScreen.storyboard */,
@@ -98,6 +99,8 @@
 		A99B0AFF23B300520039A505 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A96C41F223A71ADE00537519 /* ContentView.swift */,
+				A99B0B0123B306C50039A505 /* MainMenuView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			files = (
 				A96C41EC23A71ADE00537519 /* AppDelegate.swift in Sources */,
 				A94E8CEC23A7254C00DC9ED3 /* Game.swift in Sources */,
+				A99B0B0223B306C50039A505 /* MainMenuView.swift in Sources */,
 				A96C41F123A71ADE00537519 /* Futsal_Shuffle.xcdatamodeld in Sources */,
 				A94E8CEA23A7218A00DC9ED3 /* Deck.swift in Sources */,
 				A94E8CEE23A7283200DC9ED3 /* Player.swift in Sources */,
